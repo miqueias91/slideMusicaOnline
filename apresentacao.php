@@ -47,7 +47,7 @@
                     tmpLetra += "<p>"+auxLetra[j]+"</p>"
                   }
                   $('.slides').append(
-                    "<section>"
+                    "<section class='letraMusica'>"
                         +""+
                           tmpLetra+
                         ""       
