@@ -19,18 +19,17 @@ $(".buscar_1").click(function(){
                     // window.location.reload();
                 },
                 success: function(result) {
-                	console.log(result)
 	                for (var i = 0; i < result.response.docs.length; i++) {
 		      			$('#resultado_busca').append(
-			        		"| <a href='#' class='apresentacao' titulo='"+result.response.docs[i]['title']+"' autor='"+result.response.docs[i]['band']+"'>"+result.response.docs[i]['title']+" - "+result.response.docs[i]['band']+"</a> "
+			        		"| <a href='apresentacao.php?artist="+result.response.docs[i]['band']+"&song="+result.response.docs[i]['title']+"' class='apresentacao' titulo='"+result.response.docs[i]['title']+"' autor='"+result.response.docs[i]['band']+"'>"+result.response.docs[i]['title']+" - "+result.response.docs[i]['band']+"</a> "
 			        	);
 	      			}
-					$(".apresentacao").click(function(){
-						var artist = $(this).attr('autor');
-						var song = $(this).attr('titulo');
+					// $(".apresentacao").click(function(){
+					// 	var artist = $(this).attr('autor');
+					// 	var song = $(this).attr('titulo');
 
-				    	window.open('apresentacao.php?artist='+artist+'&song='+song, '_blank');
-					});
+				 //    	window.open('apresentacao.php?artist='+artist+'&song='+song, '_blank');
+					// });
                 },
             });
 	}
