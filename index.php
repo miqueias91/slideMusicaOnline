@@ -12,12 +12,18 @@
   </head>
   <body>
     <style type="text/css"> 
+      body {
+        background-color: #f5f5f5;
+      }
       main {
         width: 100%;
         height: 500px;       
         overflow: auto;
       }
       main .interno {
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
         transform: translate(-50%, -50%);
         position: absolute;
         top: 50%;
